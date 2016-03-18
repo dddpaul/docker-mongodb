@@ -5,8 +5,8 @@ ENV MONGO_USER=mongodb \
     MONGO_DATA_DIR=/var/lib/mongodb \
     MONGO_LOG_DIR=/var/log/mongodb
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 \
-	&& echo 'deb http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.0 multiverse' > /etc/apt/sources.list.d/mongodb.list \
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 \
+	&& echo 'deb http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.2 multiverse' > /etc/apt/sources.list.d/mongodb.list \
 	&& apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org-server mongodb-org-shell \
 	&& sed '/^[[:space:]]*bindIp/d' -i /etc/mongod.conf \

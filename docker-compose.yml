@@ -1,4 +1,4 @@
 mongodb:
-  image: sameersbn/mongodb:3.0-1
+  image: sameersbn/mongodb:3.2-1
   ports:
     - "27017:27017"
